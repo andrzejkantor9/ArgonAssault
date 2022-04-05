@@ -1,5 +1,7 @@
 using UnityEngine;
 
+//todo custom debug gui shot on screen this frame / for time
+
 //todo refactor fps counter code
 //todo scale gui according to screen
 //todo fix - f11 has to be pressed twice on window minimize
