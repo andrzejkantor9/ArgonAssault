@@ -12,11 +12,12 @@ public class ExampleScript : MonoBehaviour
     //[SerializeField] [Range(0,1)] [Tooltip("to display in inspector")]
     //STATES
     private bool m_isDead = false;
-    const string FRIENDLY_TAG = "Friendly";
+    private const string FRIENDLY_TAG = "Friendly";
 
     ///////////////////////////////////////////////
     //only engine methods without regions
     //only methods inside engine methods
+    //methods called must be below methods calling them
     //#if DEVELOPMENT_BUILD || UNITY_EDITOR
 
     private void OnValidate()
@@ -30,7 +31,7 @@ public class ExampleScript : MonoBehaviour
         AssertComponents(); 
 
         //only for naming convention, use methods instead of code inside
-        bool awakeFinished;       
+        // bool awakeFinished;       
     }
 
     private void Update() 
