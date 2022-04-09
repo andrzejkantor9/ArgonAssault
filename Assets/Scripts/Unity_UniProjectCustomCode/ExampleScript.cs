@@ -4,21 +4,29 @@ using UnityEngine;
 public class ExampleScript : MonoBehaviour
 {
     //CACHE
+    // [Header("CACHE")]
     // [SerializeField][HideInInspector]
     // private BoxCollider m_boxCollider = null;
     //PROPERTIES
-    [SerializeField]
-    private float m_speed = 1f; 
+    // [Space(10)] [Header("PROPERTIES")]
+    // [SerializeField]
+    // private float m_speed = 1f; 
     //[SerializeField] [Range(0,1)] [Tooltip("to display in inspector")]
     //STATES
-    private bool m_isDead = false;
-    private const string FRIENDLY_TAG = "Friendly";
+    // private bool m_isDead = false;
+    // private const string FRIENDLY_TAG = "Friendly";
 
     ///////////////////////////////////////////////
     //only engine methods without regions
     //only methods inside engine methods
     //methods called must be below methods calling them
     //#if DEVELOPMENT_BUILD || UNITY_EDITOR
+
+    /// <summary>
+    /// OnCollisionEnter is called when this collider/rigidbody has begun
+    /// touching another rigidbody/collider.
+    /// </summary>
+    /// <param name="other">The Collision data associated with this collision.</param>
 
     private void OnValidate()
     {
