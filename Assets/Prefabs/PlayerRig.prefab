@@ -281,6 +281,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4184170410147576550}
     m_Modifications:
+    - target: {fileID: 1563118915106591769, guid: 02a27e31cf3be8840b60c68a07e129e5, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 3914468067633617703, guid: 02a27e31cf3be8840b60c68a07e129e5, type: 3}
       propertyPath: m_Name
       value: PlayerShip
@@ -329,6 +333,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4698969668681005152, guid: 02a27e31cf3be8840b60c68a07e129e5, type: 3}
+      propertyPath: m_explosionClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 385b5677e018439439b8ec6167ebbc91, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 02a27e31cf3be8840b60c68a07e129e5, type: 3}
 --- !u!4 &4188040289864359524 stripped

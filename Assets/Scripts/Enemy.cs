@@ -59,7 +59,7 @@ public class Enemy : MonoBehaviour
             if (m_curerntHP <= 0)
             {
                 m_isDead = true;
-                Debug.Log($"{this.gameObject.name} destroyed");
+                CustomDebug.Log($"{this.gameObject.name} destroyed");
                 DestroyEnemy();
             }
             else

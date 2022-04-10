@@ -14,8 +14,8 @@ GameObject:
   - component: {fileID: 3915781317343335266}
   - component: {fileID: 570210488670140165}
   - component: {fileID: 4698969668681005152}
-  - component: {fileID: 7366155487517660381}
   - component: {fileID: 474408326571365996}
+  - component: {fileID: 7366155487517660381}
   - component: {fileID: 1563118915106591769}
   m_Layer: 0
   m_Name: PlayerShip
@@ -130,23 +130,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_explosionEffect: {fileID: 8561086645613343293}
-  m_audioSource: {fileID: 1563118915106591769}
---- !u!54 &7366155487517660381
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3914468067633617703}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_UseGravity: 0
-  m_IsKinematic: 1
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
+  m_explosionClip: {fileID: 8300000, guid: 385b5677e018439439b8ec6167ebbc91, type: 3}
+  m_playerScore: {fileID: 0}
 --- !u!114 &474408326571365996
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -241,16 +226,83 @@ MonoBehaviour:
       m_Action: Fire
       m_Flags: 0
     m_Flags: 0
+  m_restart:
+    m_Name: Restart
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: ed23a2ca-572c-4f1b-a96f-3112591f5653
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings:
+    - m_Name: 
+      m_Id: 61a86b9f-9dc9-4c73-a60d-6caa8e339832
+      m_Path: <Keyboard>/r
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Restart
+      m_Flags: 0
+    - m_Name: 
+      m_Id: 28b48c36-9233-4b26-b665-43d9e36ac476
+      m_Path: <Gamepad>/buttonWest
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Restart
+      m_Flags: 0
+    m_Flags: 0
+  m_quit:
+    m_Name: Quit
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: 7e77d6e3-7148-4592-81e8-7c411a1b48ad
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings:
+    - m_Name: 
+      m_Id: 2bf73995-afeb-4541-a49e-5ebb27282315
+      m_Path: <Keyboard>/escape
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Quit
+      m_Flags: 0
+    - m_Name: 
+      m_Id: 72cc84b8-b881-44b7-8104-2b424a1aa380
+      m_Path: <Gamepad>/start
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Quit
+      m_Flags: 0
+    m_Flags: 0
   m_lasers:
   - {fileID: 5560046714282921391}
   - {fileID: 7969847442857139039}
-  m_movementOffset: 30
+  m_laserSFX: {fileID: 8300000, guid: e119e9807566441458d3c45fefad9efc, type: 3}
+  m_movementOffset: 50
   m_positionRangeX: 15
   m_positionRangeY: 10
   m_positionPitchFactor: -2
   m_controlPitchFactor: -15
   m_positionYawFactor: 2
   m_controlRollFactor: -20
+--- !u!54 &7366155487517660381
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3914468067633617703}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!82 &1563118915106591769
 AudioSource:
   m_ObjectHideFlags: 0
@@ -536,70 +588,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1079301342698675394, guid: c36f2f416904c064dae429a3d6716400, type: 3}
-      propertyPath: looping
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1079301342698675394, guid: c36f2f416904c064dae429a3d6716400, type: 3}
-      propertyPath: lengthInSec
-      value: 0.1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1079301342698675394, guid: c36f2f416904c064dae429a3d6716400, type: 3}
-      propertyPath: moveWithTransform
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1079301342698675394, guid: c36f2f416904c064dae429a3d6716400, type: 3}
-      propertyPath: TrailModule.enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1079301342698675394, guid: c36f2f416904c064dae429a3d6716400, type: 3}
-      propertyPath: InitialModule.size3D
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1079301342698675394, guid: c36f2f416904c064dae429a3d6716400, type: 3}
-      propertyPath: TrailModule.lifetime.scalar
-      value: 0.1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1079301342698675394, guid: c36f2f416904c064dae429a3d6716400, type: 3}
-      propertyPath: TrailModule.sizeAffectsWidth
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1079301342698675394, guid: c36f2f416904c064dae429a3d6716400, type: 3}
-      propertyPath: InitialModule.startSize.scalar
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1079301342698675394, guid: c36f2f416904c064dae429a3d6716400, type: 3}
-      propertyPath: InitialModule.startSpeed.scalar
-      value: 300
-      objectReference: {fileID: 0}
-    - target: {fileID: 1079301342698675394, guid: c36f2f416904c064dae429a3d6716400, type: 3}
-      propertyPath: EmissionModule.rateOverTime.scalar
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 1079301342698675394, guid: c36f2f416904c064dae429a3d6716400, type: 3}
-      propertyPath: InitialModule.startLifetime.scalar
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 1079301342698675394, guid: c36f2f416904c064dae429a3d6716400, type: 3}
-      propertyPath: InitialModule.startColor.maxColor.b
-      value: 0.5943396
-      objectReference: {fileID: 0}
-    - target: {fileID: 1079301342698675394, guid: c36f2f416904c064dae429a3d6716400, type: 3}
-      propertyPath: InitialModule.startColor.maxColor.g
-      value: 0.28254372
-      objectReference: {fileID: 0}
-    - target: {fileID: 1079301342698675394, guid: c36f2f416904c064dae429a3d6716400, type: 3}
-      propertyPath: InitialModule.startColor.maxColor.r
-      value: 0.18222678
-      objectReference: {fileID: 0}
-    - target: {fileID: 1079301342698675395, guid: c36f2f416904c064dae429a3d6716400, type: 3}
-      propertyPath: m_Materials.Array.size
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 1079301342698675395, guid: c36f2f416904c064dae429a3d6716400, type: 3}
-      propertyPath: m_Materials.Array.data[1]
-      value: 
-      objectReference: {fileID: 2100000, guid: 2cbfbbcf3e223344a83f96898c93ddc9, type: 2}
     - target: {fileID: 1079301342698675396, guid: c36f2f416904c064dae429a3d6716400, type: 3}
       propertyPath: m_Name
       value: LaserRight
